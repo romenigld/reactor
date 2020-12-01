@@ -6,8 +6,8 @@ defmodule ReactorWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_reactor_key",
-    signing_salt: "meFAHh/Y"
+    key: "_reactor_key",                             # Command for generate the hash secret:
+    signing_salt: "GMVu6nLx/WLpqaOrBxU/oqpy2xE6od6X" # mix phx.gen.secret 32
   ]
 
   socket "/socket", ReactorWeb.UserSocket,

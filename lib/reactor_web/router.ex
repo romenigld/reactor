@@ -17,7 +17,12 @@ defmodule ReactorWeb.Router do
   scope "/", ReactorWeb do
     pipe_through :browser
 
+    resources "/users", UserController
+    resources "/podcasts", PodcastController
+    resources "/comments", CommentController
+
     live "/", PageLive, :index
+    live "/foo", FooLive
   end
 
   # Other scopes may use custom stacks.
